@@ -6,9 +6,11 @@
 
 Geen eigen binary; configuratie + procedures rondom upstream Moonlight-Qt (Flatpak `com.moonlight_stream.Moonlight`).
 
+Levert: pairing-procedure, Steam Input gamepad-preset (v0.0.2+), launch-script (v0.0.3+), latency-meet-tooling (v0.0.2+) en een levend `docs/troubleshooting.md` met bekende Sunshine/Moonlight-issues.
+
 ## Codenaam-thema
 
-MSX-game-helden. v0.0.1 = **Vampire Killer**. Vrije pool: zie Meta-repo CLAUDE.md.
+MSX-game-helden. v0.0.1 = **Vampire Killer**. **Vrije pool + rotatie-regels:** zie `Meta_SteamDeckMSX/CLAUDE.md` § Codenaam-thema (single source of truth).
 
 ## Feature & Bugfix Protocol (Color-Coded)
 
