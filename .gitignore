@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+*.bak
+.idea/
+.vscode/
+
+# Lokale state / pairing-keys
+state/
+*.pem
+*.key
