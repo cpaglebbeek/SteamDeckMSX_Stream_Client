@@ -1,0 +1,91 @@
+"controller_mappings"
+{
+	"version"		"3"
+	"revision"		"1"
+	"title"			"SteamDeckMSX — generic MSX gamepad"
+	"description"		"Generieke Steam Input preset voor MSX-titels via openMSX joystick-emulatie. D-pad → MSX-joystick richtingen, A/B → MSX-fire-1/2, Start+Select → openMSX OSD-pauze/save-state, L1/R1 → tab-wisseling in launcher, L2/R2 → snel-vooruit/slow-motion."
+	"creator"		"cpaglebbeek/SteamDeckMSX_Stream_Client"
+	"controller_type"	"controller_steamdeck"
+	"Timestamp"		"1717718400"
+
+	"actions"
+	{
+		"InGameControls"
+		{
+			"title"		"In-game"
+			"legacy_set"	"1"
+			"StickPadGyro"
+			{
+				"DPad"			"Button_DpadUp,Button_DpadDown,Button_DpadLeft,Button_DpadRight"
+			}
+			"AnalogTrigger"
+			{
+				"left_trigger"		"key_press F11"
+				"right_trigger"		"key_press F12"
+			}
+			"Button"
+			{
+				"button_a"		"key_press SPACE"
+				"button_b"		"key_press LCONTROL"
+				"button_x"		"key_press F5"
+				"button_y"		"key_press F8"
+				"left_bumper"		"key_press F2"
+				"right_bumper"		"key_press F3"
+				"button_back"		"key_press F1"
+				"button_start"		"key_press PAUSE"
+			}
+		}
+	}
+
+	"group"
+	{
+		"id"		"0"
+		"mode"		"dpad"
+		"name"		"msx_joystick_directions"
+		"description"	"D-pad mapped op MSX-joystick richtingen; cross-up/down/left/right gegenereerd"
+		"inputs"
+		{
+			"dpad_north"	{ "activators" { "Full_Press" { "bindings" { "binding" "key_press UP" } } } }
+			"dpad_south"	{ "activators" { "Full_Press" { "bindings" { "binding" "key_press DOWN" } } } }
+			"dpad_west"	{ "activators" { "Full_Press" { "bindings" { "binding" "key_press LEFT" } } } }
+			"dpad_east"	{ "activators" { "Full_Press" { "bindings" { "binding" "key_press RIGHT" } } } }
+		}
+	}
+
+	"localization"
+	{
+		"english"
+		{
+			"title"			"SteamDeckMSX — generic MSX gamepad"
+			"description"		"Generic Steam Input preset for MSX titles via openMSX joystick emulation. D-pad maps to MSX joystick directions; A/B to MSX fire-1/2."
+			"InGameControls"	"In-game (MSX titles)"
+		}
+		"dutch"
+		{
+			"title"			"SteamDeckMSX — generiek MSX-gamepad"
+			"description"		"Generieke Steam Input preset voor MSX-titels via openMSX joystick-emulatie. D-pad → MSX-joystick richtingen, A/B → MSX-fire-1/2."
+			"InGameControls"	"In-game (MSX-titels)"
+		}
+	}
+}
+
+// ---------- Mapping-overzicht (commentaar — niet gelezen door Steam) -------
+//
+//   Steam Deck knop  | openMSX-actie (default keys)
+//   ----------------------------------------------------------------
+//   D-pad ↑↓←→       | Joystick richtingen (cursor keys passthrough)
+//   A                | Fire-1 (Space)
+//   B                | Fire-2 (LCtrl)
+//   X                | Save-state quick-save (F5)
+//   Y                | Save-state quick-load (F8)
+//   L1               | Vorige game in apps.json — F2
+//   R1               | Volgende game in apps.json — F3
+//   L2               | Slow-motion toggle (F11)
+//   R2               | Fast-forward toggle (F12)
+//   Select           | openMSX OSD menu (F1)
+//   Start            | Pause/resume (PAUSE-key)
+//
+// openMSX key-bindings configureerbaar via Tcl in
+// ~/.openMSX/share/keymap.txt. Default keys hierboven uitgaande van
+// openMSX 21.0 standaard schema. Bij afwijking: pas keymap.txt aan
+// i.p.v. dit vdf-bestand (zodat preset cross-machine geldig blijft).
