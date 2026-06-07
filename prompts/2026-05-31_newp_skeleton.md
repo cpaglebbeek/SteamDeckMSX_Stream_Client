@@ -1,9 +1,16 @@
 ---
 date: 2026-05-31
 repo: SteamDeckMSX_Stream_Client
-status: open
-resume: "verder met SteamDeckMSX_Stream_Client v0.0.2 — Moonlight Flatpak install + Steam Input preset + pair.sh script"
+status: done
+resume: ""
 ---
+
+> **Opvolging 2026-06-07 (sessie-bundel SteamDeck MSX):** v0.0.2-Salamander
+> heeft `scripts/pair.sh`, `scripts/measure-latency.sh` en
+> `presets/msx-gamepad.vdf` geleverd — niet getest op Steam Deck (vereist
+> Stream_Server v0.0.3 live). Live-test, launch-script en `.desktop`-file
+> verschoven naar v0.0.3 — zie `2026-06-07_v0.0.2_pair_latency_preset.md`
+> (status: done) en `2026-06-07_v0.0.3_live_test_open.md` (status: open).
 
 # Sessie 2026-05-31 — newp SteamDeckMSX_Stream_Client (variant 2 client)
 
