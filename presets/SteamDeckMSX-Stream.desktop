@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=SteamDeckMSX Stream (Nemesis)
+Comment=MSX-stream vanaf HorseCloud55 via Moonlight — default Nemesis (Gradius)
+# Pad geldt na `git clone` in home op de Deck; pas aan bij andere checkout-locatie.
+Exec=/home/deck/SteamDeckMSX_Stream_Client/scripts/launch-msx.sh --app=Nemesis1
+Icon=input-gaming
+Terminal=false
+Categories=Game;Emulator;
