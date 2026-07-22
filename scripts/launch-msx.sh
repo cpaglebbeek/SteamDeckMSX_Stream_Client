@@ -27,13 +27,19 @@ bitrate=12000   # kbps; 720p60-budget, x264 ultrafast server-side
 app_key="CBIOS"
 host=""
 
-declare -A apps=(
-  [CBIOS]="MSX — C-BIOS shell (default)"
-  [Nemesis1]="MSX1 — Nemesis (Gradius)"
-  [Nemesis2]="MSX2 — Nemesis (SCC audio test)"
-  [BubbleBobble]="MSX1 — Bubble Bobble"
-  [MetalGear]="MSX2 — Metal Gear"
-)
+app_keys="CBIOS Nemesis1 Nemesis2 BubbleBobble MetalGear"
+
+# Bash 3.2-compatibel (geen associative arrays) — zo ook op macOS testbaar.
+app_name_for() {
+  case "$1" in
+    CBIOS)        echo "MSX — C-BIOS shell (default)" ;;
+    Nemesis1)     echo "MSX1 — Nemesis (Gradius)" ;;
+    Nemesis2)     echo "MSX2 — Nemesis (SCC audio test)" ;;
+    BubbleBobble) echo "MSX1 — Bubble Bobble" ;;
+    MetalGear)    echo "MSX2 — Metal Gear" ;;
+    *)            return 1 ;;
+  esac
+}
 
 usage() {
   cat <<EOF
@@ -41,7 +47,7 @@ launch-msx.sh — start MSX-stream in Moonlight (Gaming Mode-vriendelijk).
 
 Gebruik: launch-msx.sh [--app=<key>] [--list] [host]
 
-Keys: ${!apps[*]}
+Keys: ${app_keys}
 Default host: ${default_host}
 EOF
 }
@@ -49,7 +55,7 @@ EOF
 for arg in "$@"; do
   case "${arg}" in
     --app=*) app_key="${arg#--app=}" ;;
-    --list)  for k in "${!apps[@]}"; do printf '%-14s %s\n' "${k}" "${apps[${k}]}"; done; exit 0 ;;
+    --list)  for k in ${app_keys}; do printf '%-14s %s\n' "${k}" "$(app_name_for "${k}")"; done; exit 0 ;;
     -h|--help) usage; exit 0 ;;
     -*) echo "Onbekende optie: ${arg}" >&2; usage; exit 2 ;;
     *) host="${arg}" ;;
@@ -58,8 +64,8 @@ done
 
 host="${host:-${default_host}}"
 
-if [[ -z "${apps[${app_key}]:-}" ]]; then
-  echo "Onbekende app-key '${app_key}'. Kies uit: ${!apps[*]}" >&2
+if ! app_name="$(app_name_for "${app_key}")"; then
+  echo "Onbekende app-key '${app_key}'. Kies uit: ${app_keys}" >&2
   exit 2
 fi
 
@@ -68,6 +74,6 @@ if ! flatpak info "${moonlight_flatpak}" >/dev/null 2>&1; then
   exit 1
 fi
 
-exec flatpak run "${moonlight_flatpak}" stream "${host}" "${apps[${app_key}]}" \
+exec flatpak run "${moonlight_flatpak}" stream "${host}" "${app_name}" \
   --resolution "${resolution}" --fps "${fps}" --bitrate "${bitrate}" \
   --quit-after

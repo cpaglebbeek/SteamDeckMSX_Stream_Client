@@ -1,5 +1,20 @@
 # CHANGELOG — SteamDeckMSX_Stream_Client
 
+## v0.0.3-werk (2026-07-22) — launcher + .desktop klaar; Deck-test wacht op hardware
+
+> Server-kant is LIVE (Stream_Server v0.1.0-Gradius, HC55). Extern geverifieerd:
+> `/serverinfo` op :47989 antwoordt met hostname SteamDeckMSX-HC55. Poort :47984
+> reset een kale curl bewust (client-cert na pairing) — geen firewall-issue.
+
+- `scripts/launch-msx.sh` — Gaming-Mode launcher, `--app=CBIOS|Nemesis1|Nemesis2|BubbleBobble|MetalGear`,
+  1280x800@60, 12 Mbps, `--quit-after`; app-namen 1-op-1 met server apps.json v0.1.0.
+  Bash 3.2-compatibel (case-mapping i.p.v. associative array) → op Mac getest:
+  --list, onbekende key (exit 2), ontbrekende Flatpak (exit 1)
+- `presets/SteamDeckMSX-Stream.desktop` — "Add Non-Steam Game"-entry, default Nemesis (Gradius)
+- Nog open (vereist fysieke Deck): Moonlight Flatpak install, pair.sh PIN-flow
+  (via ssh-tunnel :47990, zie Stream_Server deploy/state.md), latency-meting,
+  vdf-import, visuele preset-verificatie → dan pas versie-bump naar v0.1.0
+
 ## v0.0.2-Salamander (2026-06-07) — Pair-script + latency-meet + Steam Input preset (oranje)
 
 > Alle scripts geschreven maar **niet getest op Steam Deck** (vereist Stream_Server
