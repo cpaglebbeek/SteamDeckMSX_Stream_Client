@@ -32,8 +32,8 @@ Steam Deck (SteamOS Gaming/Desktop Mode)
 
 1. **Eénmalig (Desktop Mode):**
    - Install Moonlight via Discover
-   - Run `pair.sh horsecloud55.ddns.net` → toont PIN-instructie
-   - Open `https://horsecloud55.ddns.net:47990` in browser → voer PIN in
+   - Run `pair.sh icthorsecloud.nl` → toont PIN-instructie
+   - Open `https://icthorsecloud.nl:47990` in browser → voer PIN in
 2. **Eénmalig (Gaming Mode):**
    - Add "MSX Stream" als Non-Steam Game met de juiste launch-flags
    - Import Steam Input preset `msx-gamepad.vdf`

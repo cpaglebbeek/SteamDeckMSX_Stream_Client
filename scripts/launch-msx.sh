@@ -5,7 +5,7 @@
 # Gebruik:
 #   launch-msx.sh                          # default host + C-BIOS shell
 #   launch-msx.sh --app=Nemesis1           # Nemesis (Gradius) op default host
-#   launch-msx.sh --app=Nemesis2 horsecloud55.ddns.net
+#   launch-msx.sh --app=Nemesis2 icthorsecloud.nl
 #   launch-msx.sh --list                   # toon app-keuzes
 #
 # App-namen corresponderen met Stream_Server deploy/sunshine/apps.json
@@ -16,7 +16,7 @@
 
 set -euo pipefail
 
-default_host="horsecloud55.ddns.net"
+default_host="icthorsecloud.nl"
 moonlight_flatpak="com.moonlight_stream.Moonlight"
 
 # Steam Deck native: 1280x800. Bitrate conservatief voor residential upload HC55.

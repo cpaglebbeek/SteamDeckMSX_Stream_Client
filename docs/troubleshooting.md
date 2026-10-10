@@ -5,8 +5,8 @@
 ## Verwachte issues op basis van Sunshine/Moonlight community-rapporten
 
 ### Pairing lukt niet — Moonlight ziet HC55 niet
-- **Check 1:** ping `horsecloud55.ddns.net` vanaf Deck
-- **Check 2:** poort 47984 TCP open vanaf Deck? `nc -zv horsecloud55.ddns.net 47984`
+- **Check 1:** ping `icthorsecloud.nl` vanaf Deck
+- **Check 2:** poort 47984 TCP open vanaf Deck? `nc -zv icthorsecloud.nl 47984`
 - **Check 3:** Hetzner firewall + ufw op HC55 hebben Sunshine-poorten ge-allowlist
 
 ### Stream start maar zwart scherm

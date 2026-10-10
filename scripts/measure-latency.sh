@@ -6,9 +6,9 @@
 # `Performance Overlay` of `iperf3` tussen Deck en HC55).
 #
 # Gebruik:
-#   measure-latency.sh horsecloud55.ddns.net
-#   measure-latency.sh horsecloud55.ddns.net --count 20
-#   measure-latency.sh horsecloud55.ddns.net --tcp-only
+#   measure-latency.sh icthorsecloud.nl
+#   measure-latency.sh icthorsecloud.nl --count 20
+#   measure-latency.sh icthorsecloud.nl --tcp-only
 
 set -euo pipefail
 

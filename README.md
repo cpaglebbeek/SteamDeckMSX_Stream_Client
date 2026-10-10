@@ -25,7 +25,7 @@
 # Op Steam Deck Desktop Mode:
 flatpak install com.moonlight_stream.Moonlight
 git clone https://github.com/cpaglebbeek/SteamDeckMSX_Stream_Client ~/SteamDeckMSX_Stream_Client
-~/SteamDeckMSX_Stream_Client/scripts/pair.sh horsecloud55.ddns.net
+~/SteamDeckMSX_Stream_Client/scripts/pair.sh icthorsecloud.nl
 ```
 
 ## Licentie

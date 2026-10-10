@@ -4,9 +4,9 @@
 # obscure Moonlight-UI te dwingen op een Steam Deck-touchscreen.
 #
 # Gebruik:
-#   pair.sh horsecloud55.ddns.net
-#   pair.sh horsecloud55.ddns.net --dry-run
-#   pair.sh --check-only horsecloud55.ddns.net
+#   pair.sh icthorsecloud.nl
+#   pair.sh icthorsecloud.nl --dry-run
+#   pair.sh --check-only icthorsecloud.nl
 #
 # Forward-compat met v0.0.3 launch-script: dit script schrijft de paired-state
 # in dezelfde locatie die Moonlight Flatpak gebruikt
@@ -38,7 +38,7 @@ Gebruik:
 
 Argumenten:
   <host>         hostnaam of IP van Stream Server (vereist).
-                 Voorbeeld: horsecloud55.ddns.net
+                 Voorbeeld: icthorsecloud.nl
 
 Opties:
   --dry-run      Toon alles wat zou gebeuren, voer niets uit.

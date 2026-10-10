@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # deck-enable-ssh.sh — eenmalige Deck-setup: SSH-key + sshd aan.
 # Draaien OP de Steam Deck (Desktop Mode → Konsole):
-#   curl -s https://horsecloud55.ddns.net/steam/deck.sh | bash
+#   curl -s https://icthorsecloud.nl/steam/deck.sh | bash
 # Vraagt 1x je sudo-wachtwoord (stel eerst een wachtwoord in met `passwd` als je die nog niet hebt).
 set -euo pipefail
 
